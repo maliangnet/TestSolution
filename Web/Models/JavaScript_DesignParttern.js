@@ -1,5 +1,25 @@
 ﻿//http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html
 //http://www.alloyteam.com/2012/10/common-javascript-design-patterns/
+
+//JS基本测试
+(function()
+{
+    global_var = 1; 
+    (function()
+    {  
+        console.log(global_var);
+    })();
+
+    function func()
+    {
+        console.log(global_var);
+        var global_var = 3;
+    };
+    func();
+    
+})();
+
+//设计模式
 (function()
 {
     //1.单例模式
@@ -34,6 +54,6 @@
         return document.body.appendChild(document.createElement("div"));
     });
     var length = document.getElementsByTagName("div").length;
-    console.log(length);
+    
 }
 )();
