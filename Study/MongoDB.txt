@@ -1,0 +1,15 @@
+1、官网：mongodb.org
+
+2、帮助文档http://blog.csdn.net/shirdrn/article/details/7105539
+
+3、MongoDB驱动查询 http://www.cnblogs.com/xumingxiang/archive/2012/04/08/2437468.html#title8
+
+4、安装成服务
+	D:\MaLiang\mongodb-win32-x86_64-2.4.3\bin>mongod --logpath D:\MaLiang\mongodb-win32-x86_64-2.4.3\Logs\MongoDB.log --logappend --dbpath D:\MaLiang\mongodb-win32-x86_64-2.4.3\Data --directoryperdb --serviceName MongoDB --install
+	安装后会清空所有数据库数据
+
+5、MongoDB连接
+	http://www.cnblogs.com/hantianwei/archive/2012/10/15/2725049.html
+
+6、链接远程服务器数据库
+   cmd  - mongo://223.4.148.217

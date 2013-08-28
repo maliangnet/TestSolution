@@ -1,0 +1,13 @@
+1、MVC分页 http://www.webdiyer.com/
+2、返回值MVC ActionResult  http://www.cnblogs.com/celery94/archive/2011/01/12/1933541.html
+	EmptyResult：表示不执行任何操作的结果
+	ContentResult ：返回文本结果
+	JavaScriptResult：返回结果为JavaScript
+	JsonResult ：返回Json结构数据
+	RedirectResult,RedirectToRouteResult
+	FileContentResult,FilePathResult,FileStreamResult
+	ViewResult,PartialViewResult
+	HttpNotFoundResult,HttpUnauthorizedResult
+
+3、MVC 3.0 在各个版本IIS中的部署
+	http://www.cnblogs.com/xiongpq/archive/2011/05/25/2057445.html

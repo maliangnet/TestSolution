@@ -1,0 +1,33 @@
+1、Jquery图表工具TufteGraph
+    http://xaviershay.github.io/tufte-graph/
+
+2、IE6、7、8支持HTML5   https://code.google.com/p/html5shiv/
+   A、增加一个html5的ie辅助js文件和一个canvas兼容js文件 
+       这个文件可命名为html5.js,这是一个开源的js文件，可以放心使用，它主要是解决了了6,7,8兼容html5的js的问题。canvas兼容文件命名为excanvas.compiled.js，所有文件我已经打包在demo里面。可以下载。 
+   B、增加一个css文件和在页面进行引用。 
+      css文件命名为ie-css3.htc，它解决了ie6,7,8,兼容css3的问题。增加一个html5的ie辅助js文件和一个canvas兼容js文件
+
+3、Jquery 图表
+	http://www.gbin1.com/technology/jquery/jquerytop5charting/
+   highcharts http://docs.highcharts.com/#understanding-highcharts
+
+4、Unobtrusive JavaScript in ASP.NET MVC 3
+   http://www.cnblogs.com/dozer/archive/2010/11/11/1874743.html
+
+5、精心挑选的12款优秀 jQuery Ajax 分页插件和教程
+	http://www.cnblogs.com/lhb25/archive/2012/08/08/ajax-jquery-pagination-plugin-tutorial.html
+
+6、jquery.unobtrusive-ajax
+	1、Web.config 开启 Unobtrusive JavaScript  <add key="UnobtrusiveJavaScriptEnabled" value="true"/>
+	2、data-ajax = true
+	3、 Confirm				         data-ajax-confirm
+		HttpMethod		             data-ajax-method
+		InsertionMode	             data-ajax-mode 
+		LoadingElementDuration	     data-ajax-loading-duration 
+		LoadingElementId	         data-ajax-loading
+		OnBegin	                     data-ajax-begin
+		OnComplete	                 data-ajax-complete
+		OnFailure	                 data-ajax-failure
+		OnSuccess	                 data-ajax-success
+		UpdateTargetId	             data-ajax-update
+		Url	                         data-ajax-url

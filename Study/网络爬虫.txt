@@ -1,0 +1,13 @@
+1、网络爬虫
+   利用Winista.Htmlparser.Net 解析Html,官网http://www.netomatix.com/Products/DocumentManagement/HTMLParserNet.aspx
+   帐号：maliangnet 密码：0e67e46c84
+   参考：http://www.cnblogs.com/gaoweipeng/archive/2009/09/02/1558279.html
+
+2、网络爬虫技术浅析
+    http://www.cnblogs.com/suibianti/archive/2013/05/28/3104051.html
+
+3、Html Agility Pack 比较好的解析器，比正则表达式还快
+   http://htmlagilitypack.codeplex.com/
+   可以通过NuGet联机搜索
+   http://www.cnblogs.com/ITmuse/archive/2010/05/29/1747199.html
+   XPath 语法  http://www.w3school.com.cn/xpath/xpath_syntax.asp
