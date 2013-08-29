@@ -4,20 +4,81 @@
 //JS基本测试
 (function()
 {
-    global_var = 1; 
-    (function()
-    {  
-        console.log(global_var);
-    })();
+   //var calculator = function(eq)
+   //    {
+   //         var eqCtl = document.getElementById(eq);
+   //         return{
+   //                     add : function(x,y)
+   //                     {
+   //                         var  val = x + y;
+   //                         eqCtl.innerHTML = val;
+   //                     }
+   //                 };
+   //    }("div").add(5,5);
+    //var calc = new calculator("div");
+    //calculator("div").add(1,2);
+    //calc.add(10,20);
+});
 
-    function func()
+(function()
+{
+    var blogModel = (function(my)
     {
-        console.log(global_var);
-        var global_var = 3;
-    };
-    func();
+        var my = {}, privateName = "博客园";
+        
+        function privateAddTopic(data){return data;};
+       
+        my.name = privateName;
+        my.addTopic = function(data){ return privateAddTopic(data);}
+
+        return my;
+
+    }(blogModel || {}));
+
+    //私有属性多个文件共享
+    (function(my)
+    {
+        var _private = my.private = my.private||{},
+            _sales = my.sales = my.sales || function()
+            {
+                delete my.private;
+                delete my.sales;
+            },
+            _unsale = my.unsale = my.unsale || function()
+            {
+                my.private = _private;
+                my.sales = _sales;
+            };
+    }(blogModel||{}));
     
-})();
+    console.log(blogModel.name);
+
+    var blogModel = blogModel || {};
+    (function(old)
+    {
+        var my ={},key;
+
+        for(key in old)
+            if(old.hasOwnProperty(key))
+                my[key] = old[key];
+
+        var oldAddPhoto = old.addPhoto;
+        old.addPhoto = function()
+        {
+            console.log("添加addPhoto方法");
+        };
+    }(blogModel || {}));
+
+    console.log(blogModel.addTopic(1));
+
+    blogModel.addPhoto();
+
+}());
+
+(function()
+{
+    //console.log(a);
+}());
 
 //设计模式
 (function()
