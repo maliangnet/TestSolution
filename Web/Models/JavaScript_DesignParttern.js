@@ -1,6 +1,6 @@
 ﻿//http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html
 //http://www.alloyteam.com/2012/10/common-javascript-design-patterns/
-//开始 http://www.cnblogs.com/TomXu/archive/2012/01/12/2308594.html
+//开始 http://www.cnblogs.com/TomXu/archive/2012/01/16/2309728.html
 //JS基本测试
 (function()
 {
@@ -18,31 +18,27 @@
     //    }(i));
     //}
     
-    var foo = 
-        {
-            x: 2,
-            add: function ()
-            {
-                return this.x + this.y;
-            }
-        }
-    var a =
-        {
-            x : 10,
-            y: 3,
-            __proto__:foo
-        }
-    var b =
-        {
-            y: 3,
-            __proto__: foo
-        }
+    function Foo(x)
+    {
+    }
 
-    function fun()
-    { }
+    Foo.prototype.x = 3;
+    Foo.prototype.calculate  = function(y)
+    {
+        return this.x + y;
+    }
 
-    var f = new fun();
-    console.log(f.__proto__ === fun.prototype);
+    var a = new Foo();
+    var b = new Foo();
+
+    console.log(a.calculate(2));
+    console.log(b.calculate(20));
+
+    console.log(Foo.prototype.__proto__);
+    console.log(Foo.prototype.constructor.__proto__);
+
+    var c = 3;
+    console.log(1,3);
 
 
 }());
