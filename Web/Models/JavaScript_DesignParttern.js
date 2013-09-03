@@ -40,6 +40,10 @@
     var c = 3;
     console.log(1,3);
 
+    for(var i=0;i<3;i++)
+        console.log("for "+i);
+    console.log(i);
+
 
 }());
 
