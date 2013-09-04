@@ -4,48 +4,25 @@
 //JS基本测试
 (function()
 {
-    //var a = document.getElementsByTagName("a");
-    //for(var i=0,max = a.length;i<max;i++)
-    //{
-    //    (function(i)
-    //    {
-    //        a[i].addEventListener("click", function (e)
-    //        {           
-    //            e.preventDefault();
-    //            console.log("click " + i);
+    var a = document.getElementsByTagName("a");
+    for(var i=0,max = a.length;i<max;i++)
+    {
+        (function(i)
+        {
+            a[i].addEventListener("click", function (e)
+            {           
+                e.preventDefault();
+                console.log("click " + i);
             
-    //        }, false);
-    //    }(i));
-    //}
-    
-    function Foo(x)
-    {
+            }, false);
+        }(i));
     }
 
-    Foo.prototype.x = 3;
-    Foo.prototype.calculate  = function(y)
-    {
-        return this.x + y;
-    }
-
-    var a = new Foo();
-    var b = new Foo();
-
-    console.log(a.calculate(2));
-    console.log(b.calculate(20));
-
-    console.log(Foo.prototype.__proto__);
-    console.log(Foo.prototype.constructor.__proto__);
-
-    var c = 3;
-    console.log(1,3);
-
-    for(var i=0;i<3;i++)
-        console.log("for "+i);
-    console.log(i);
-
-
-}());
+    var x = 3;
+    console.log(this.x);
+}
+ )();
+   
 
 //设计模式
 (function()
