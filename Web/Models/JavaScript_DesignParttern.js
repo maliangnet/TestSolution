@@ -1,10 +1,12 @@
 ﻿//http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html
 //http://www.alloyteam.com/2012/10/common-javascript-design-patterns/
-//开始 http://www.cnblogs.com/TomXu/archive/2012/01/16/2309728.html
+//开始 http://www.cnblogs.com/TomXu/archive/2012/01/30/2326372.html
 //设计模式 http://www.cnblogs.com/TomXu/archive/2012/02/20/2352817.html
 //JS基本测试
 (function()
 {
+    //----------------------  
+    console.log("JS Test 1..............");
     var a = document.getElementsByTagName("a");
     for(var i=0,max = a.length;i<max;i++)
     {
@@ -18,6 +20,43 @@
             }, false);
         }(i));
     }
+     //----------------------  
+    console.log("JS Test 2..............");
+    var x = 10;
+    function foo()
+    {
+        var y = 20;
+        function bar(){
+            console.log(x + y);
+        }
+        return bar;
+    }
+    foo()();
+     //----------------------  
+    console.log("JS Test 3..............");
+    var y = 5;
+    function f3()
+    {
+        console.log(y);
+    }
+    (function(){
+        var y = 8;
+        f3();
+    })();
+     //---------------------- 
+    console.log("JS Test 4..............");
+    var x4 = 3;
+    function F4()
+    {
+       x4 = 10;        
+    }
+    F4();
+    console.log(x4);
+
+    var x4_1 = 10;
+    var x4_2 = function(){x4_1=20}
+    x4_2();
+    console.log(x4_1);
 }
  )();
 
