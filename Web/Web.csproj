@@ -120,6 +120,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <Content Include="Models\chosen.css" />
     <Content Include="Models\JavaScript_DesignParttern.js" />
     <Content Include="Models\jquery-1.10.2.js" />
     <Content Include="Models\MVC.js" />
@@ -143,6 +144,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\JS.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\jquery.chosen.js" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
