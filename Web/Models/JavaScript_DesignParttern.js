@@ -134,5 +134,17 @@
     var mySingleton5_1 = new mySingleton5();
     var mySingleton5_2 = new mySingleton5();
     console.log(mySingleton5_1 === mySingleton5_2);
+    //---------------------- 
+    console.log("Singleton 6 ..............");
+    var userInfo = (function ()
+    {
+        var name = "名称", code = "代码";
+        return {
+            name: name,
+            code : code
+        };
+    })();
+    console.log(userInfo.name);
+
 }
 )();
