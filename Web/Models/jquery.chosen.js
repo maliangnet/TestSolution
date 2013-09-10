@@ -249,7 +249,9 @@
         classes.push(option.classes);
       }
       style = option.style.cssText !== "" ? " style=\"" + option.style + "\"" : "";
-      return "<li class=\"" + (classes.join(' ')) + "\"" + style + " data-option-array-index=\"" + option.array_index + "\">" + option.search_text + "</li>";
+      //马亮修改,为了添加电话号码搜索
+      option.search_text = option.search_text.replace("__", "<br/>");
+      return "<li class=\"" + (classes.join(' ')) + "\"" + style + " data-option-array-index=\"" + option.array_index + "\">" +  option.search_text+ "</li>";
     };
 
     AbstractChosen.prototype.result_add_group = function(group) {
@@ -308,12 +310,12 @@
             if (option.search_match) {
               results += 1;
             }
-            //解决中文搜索不能匹配任意位置的文字 开始
+            //马亮修改  解决中文搜索不能匹配任意位置的文字 开始
             else if((option.html).indexOf(searchText) >= 0){
                 option.search_match = true;
                 results += 1;
             } 
-            //解决中文搜索不能匹配任意位置的文字 完毕
+            //马亮修改  解决中文搜索不能匹配任意位置的文字 完毕
             if (option.search_match) {
               if (searchText.length) {
                 startpos = option.search_text.search(zregex);
@@ -893,7 +895,7 @@
       return this.selected_item.find("abbr").remove();
     };
 
-    Chosen.prototype.result_select = function(evt) {
+    Chosen.prototype.result_select = function(evt) {        
       var high, item;
 
       if (this.result_highlight) {
