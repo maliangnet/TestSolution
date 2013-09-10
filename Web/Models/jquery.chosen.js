@@ -947,6 +947,8 @@
         this.single_deselect_control_build();
         this.selected_item.removeClass("chzn-default");
       }
+        //马亮修改,为了添加电话号码搜索,点击项时删除__后边的电话
+      text = text.indexOf("__") > -1 ? text.substring(0, text.indexOf("__")) : text;
       return this.selected_item.find("span").text(text);
     };
 

@@ -36,16 +36,22 @@
 
         $(function()
         {
-            $("#ddListCustomer").chosen().change("",function(data){
-                var index = $("a.chzn-single>span").html().indexOf("__");
-                if(index>-1)
-                    $("a.chzn-single>span").html($("a.chzn-single>span").html().substring(0,index))
-            });
-            $("#ddListCustomer").on("change",function()
-            {
-                console.log($("a.chzn-single>span").size());
-                console.log($("a.chzn-single>span").html());
-            });
+            $("#ddListCustomer").chosen();
+            //    .change("", function (data) {
+            //    var index = $("a.chzn-single>span").html().indexOf("__");
+            //    if(index>-1)
+            //        $("a.chzn-single>span").html($("a.chzn-single>span").html().substring(0,index))
+            //});
+            //$("#ddListCustomer").on("change",function()
+            //{
+            //    console.log($("a.chzn-single>span").size());
+            //    console.log($("a.chzn-single>span").html());
+            //});
+
+            var sp = new SelectParser();
+            console.log(sp.escapeExpression("<span>123</span>"));
+
+
         })
 
     </script>
