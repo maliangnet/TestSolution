@@ -19,5 +19,17 @@ namespace Web.Controllers
             return View();
         }
 
+        public string Ajax()
+        {
+            string file = Request.Files.Count.ToString();
+            return "OK-" + file + "-" + Math.Round(10000f).ToString();
+        }
+
+        public string Ajax1(HttpPostedFileBase postFile)
+        {
+            string file = Request.Files.Count.ToString();
+            return "OK-" + file + "-" + Math.Round(10000f).ToString() + postFile.FileName;
+        }
+
     }
 }

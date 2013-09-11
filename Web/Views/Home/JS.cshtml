@@ -5,13 +5,33 @@
     <title>Javascript Design Pattern</title>
     <link href="~/Models/chosen.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="~/Models/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="~/Models/jquery.unobtrusive-ajax.js"></script>
     <script type="text/javascript" src="~/Models/jquery.chosen.js"></script>
 </head>
 <body>
-   
-    <form action="/Member/ConfirmUser"  method="post" enctype="application/x-www-form-urlencoded" class="p-edituser">
+   @*using(Html.BeginForm("Ajax","Home",FormMethod.Post,new{enctype = "multipart/form-data"})){*@
+       
+    @*<form action="/Home/Ajax" enctype="multipart/form-data" method="post">*@
+    @using (Ajax.BeginForm("Ajax", "Home", new AjaxOptions { OnSuccess = "success", }, new { enctype = "multipart/form-data" }))
+    {
+        //<form method="post" data-ajax="true" data-ajax-method="post" data-ajax-action="/Home/Ajax" enctype = "multipart/form-data" >
+        <input type="file" name="postFile" /><br />
+        <input type="submit" value="Test" />
+        <div id="divSuccess"></div>
+        //</form>
+    }
 
-    </form>
+    @*</form>*@
+       
+       
+    @*}*@
+    <script type="text/javascript">
+        function success(data)
+        {
+            console.log(data);
+        }
+    </script>
+
 
     <div id="div"></div>    
     <a href="#">one</a><br />
