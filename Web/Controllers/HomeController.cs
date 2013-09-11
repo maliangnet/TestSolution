@@ -15,6 +15,7 @@ namespace Web.Controllers
 
         public ActionResult JS()
         {
+            
             return View();
         }
 
