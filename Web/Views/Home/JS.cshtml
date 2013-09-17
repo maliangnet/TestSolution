@@ -9,77 +9,19 @@
     <script type="text/javascript" src="~/Models/jquery.chosen.js"></script>
 </head>
 <body>
-   @*using(Html.BeginForm("Ajax","Home",FormMethod.Post,new{enctype = "multipart/form-data"})){*@
-       
-    @*<form action="/Home/Ajax" enctype="multipart/form-data" method="post">*@
-    @using (Ajax.BeginForm("Ajax", "Home", new AjaxOptions { OnSuccess = "success", }, new { enctype = "multipart/form-data" }))
-    {
-        //<form method="post" data-ajax="true" data-ajax-method="post" data-ajax-action="/Home/Ajax" enctype = "multipart/form-data" >
-        <input type="file" name="postFile" /><br />
-        <input type="submit" value="Test" />
-        <div id="divSuccess"></div>
-        //</form>
-    }
-
-    @*</form>*@
-       
-       
-    @*}*@
-    <script type="text/javascript">
-        function success(data)
-        {
-            console.log(data);
-        }
-    </script>
-
-
     <div id="div"></div>    
     <a href="#">one</a><br />
     <a href="#">two</a><br />
     <a href="#">three</a><br />
     <a href="#">four</a><br />
-    <a href="#">five</a><br />&gt;
-
-    <select id="ddListCustomer">
-        <option value="" selected="selected">请选择</option>
-        <option value="1">INOVIT Shanghai Co. Ltd  __ 123465</option>
-        <option value="1904">Home Cars __ 123465</option>
-        <option value="1906">天天公司</option>
-    </select><br>
-
-
-
+    <a href="#">five</a><br />
     <br><input type="button" name="ajax" value="Cache" />
 
 
     
-    @*<script type="text/javascript" src="~/Models/JavaScript_DesignParttern.js"></script>*@
+    <script type="text/javascript" src="~/Models/JavaScript_DesignParttern.js"></script>
     @*<script type="text/javascript" src="~/Models/MVC.js"></script>*@
 
-
-    <script type="text/javascript">
-
-        $(function()
-        {
-            $("#ddListCustomer").chosen();
-            //    .change("", function (data) {
-            //    var index = $("a.chzn-single>span").html().indexOf("__");
-            //    if(index>-1)
-            //        $("a.chzn-single>span").html($("a.chzn-single>span").html().substring(0,index))
-            //});
-            //$("#ddListCustomer").on("change",function()
-            //{
-            //    console.log($("a.chzn-single>span").size());
-            //    console.log($("a.chzn-single>span").html());
-            //});
-
-            var sp = new SelectParser();
-            console.log(sp.escapeExpression("<span>123</span>"));
-
-
-        })
-
-    </script>
 
 </body>
 </html>
