@@ -1,6 +1,6 @@
 ﻿//http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html
 //http://www.alloyteam.com/2012/10/common-javascript-design-patterns/
-//开始 http://www.cnblogs.com/TomXu/archive/2012/02/03/2330295.html
+//开始 http://www.cnblogs.com/TomXu/archive/2012/02/14/2330137.html
 //设计模式 http://www.cnblogs.com/TomXu/archive/2012/02/20/2352817.html
 //JS基本测试
 (function()
@@ -63,66 +63,76 @@
     //}(2);
      //---------------------- 
     //console.log("JS Test 5..............");
-    function explameFun(funArg)
-    {
-        funArg();
-    }
-    explameFun(function()
-    {
-        console.log("explameFun");
-    });
+    //function explameFun(funArg)
+    //{
+    //    funArg();
+    //}
+    //explameFun(function()
+    //{
+    //    console.log("explameFun");
+    //});
 
-    (function functionValued()
-    {
-        return function()
-        {
-            console.log("functionValued");
-        }
-    })()();
+    //(function functionValued()
+    //{
+    //    return function()
+    //    {
+    //        console.log("functionValued");
+    //    }
+    //})()();
 
-    (function selfApplicative(funArg)
-    {
-        if(funArg && funArg === selfApplicative)
-        {
-            console.log("selfApplicative");
-            return;
-        }
-        selfApplicative(selfApplicative);
+    //(function selfApplicative(funArg)
+    //{
+    //    if(funArg && funArg === selfApplicative)
+    //    {
+    //        console.log("selfApplicative");
+    //        return;
+    //    }
+    //    selfApplicative(selfApplicative);
 
-    })();
+    //})();
 
-    function model(e)
-    {
-        console.log(e);
-        return model;
-    }
-    model(1)(2)(3);
+    //function model(e)
+    //{
+    //    console.log(e);
+    //    return model;
+    //}
+    //model(1)(2)(3);
 
-    function testFun()
-    {
-        var localVar = 10;
-        function innerFn(funArg)
-        {
-            console.log(localVar + funArg);
-        }
-        return innerFn;
-    }
+    //function testFun()
+    //{
+    //    var localVar = 10;
+    //    function innerFn(funArg)
+    //    {
+    //        console.log(localVar + funArg);
+    //    }
+    //    return innerFn;
+    //}
 
-    var tf = new testFun();
-    tf(20);
+    //var tf = new testFun();
+    //tf(20);
 
-    var z = 10;
-    function foo()
-    {
-        console.log(z);
-    }
-    foo();
+    //var z = 10;
+    //function foo()
+    //{
+    //    console.log(z);
+    //}
+    //foo();
 
-    (function()
-    {
-        var z = 20;
-        foo();
-    })();
+    //(function()
+    //{
+    //    var z = 20;
+    //    foo();
+    //})();
+
+    //if(!(a in window))
+    //    var a =30;
+    //console.log(a);
+
+    var a = 1;
+    var b = function a(x){console.log(a);}
+    console.log(a);
+
+
    
 }
  )();

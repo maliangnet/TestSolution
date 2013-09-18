@@ -31,5 +31,12 @@ namespace Web.Controllers
             return "OK-" + file + "-" + Math.Round(10000f).ToString() + postFile.FileName;
         }
 
+        delegate double del();
+
+        public double delT()
+        {
+            return 2;
+        }
+
     }
 }
