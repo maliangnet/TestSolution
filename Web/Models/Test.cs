@@ -73,9 +73,37 @@ namespace Web.Models
 
         protected void b()
         {
+            var a = new AA();
             SC::ArrayList a1 = null;
         }
         
+    }
+
+    public static class Extensions
+    {
+        public static void Foo(this string s)
+        { }
+
+        public static void T()
+        {
+            
+            String s1 = "Hello World!";
+            s1.Foo();
+            int a = 3;
+            var a1 = new { name=1};
+
+
+            ClassInit ci = new ClassInit(1) { Name="1"};
+            
+        }
+    }
+
+    public class ClassInit
+    {
+        public ClassInit(int a)
+        { }
+
+        public string Name { set; get; }
     }
 
 

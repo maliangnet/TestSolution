@@ -31,13 +31,13 @@ namespace Web.Controllers
             return "OK-" + file + "-" + Math.Round(10000f).ToString() + postFile.FileName;
         }
 
-<<<<<<< HEAD
         public ActionResult Test()
         {
+            var a1= 3;
+            var b = new[] { 1,2,3};
             int a = Web.Models.Test.Test1();
             return Content(a.ToString());
         }
-=======
         delegate double del();
 
         public double delT()
@@ -45,6 +45,5 @@ namespace Web.Controllers
             return 2;
         }
 
->>>>>>> 923ba169bccff540f79bc6c4ba86dd4aaa816a7c
     }
 }
