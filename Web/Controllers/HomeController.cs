@@ -31,10 +31,20 @@ namespace Web.Controllers
             return "OK-" + file + "-" + Math.Round(10000f).ToString() + postFile.FileName;
         }
 
+<<<<<<< HEAD
         public ActionResult Test()
         {
             int a = Web.Models.Test.Test1();
             return Content(a.ToString());
         }
+=======
+        delegate double del();
+
+        public double delT()
+        {
+            return 2;
+        }
+
+>>>>>>> 923ba169bccff540f79bc6c4ba86dd4aaa816a7c
     }
 }
