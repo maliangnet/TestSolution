@@ -1,5 +1,7 @@
 ﻿using System;
 using SC = System.Collections;
+using System.Collections;
+using System.Collections.Generic;
 namespace Web.Models
 {
     public class Test
@@ -100,8 +102,19 @@ namespace Web.Models
 
     public class ClassInit
     {
+        delegate int x(int i) ;
         public ClassInit(int a)
-        { }
+        {
+
+            List<int> list = new List<int>();
+            list.FindAll(delegate(int i) { return true; });
+            list.FindAll(s => s.ToString() == "abc");
+
+            int[] c = new int[] { 1,2,3,4};
+            int x = 3;
+            int c1 = x => x * 10;
+        
+        }
 
         public string Name { set; get; }
     }
