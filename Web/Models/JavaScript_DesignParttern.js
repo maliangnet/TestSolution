@@ -1,6 +1,6 @@
 ﻿//http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html
 //http://www.alloyteam.com/2012/10/common-javascript-design-patterns/
-//开始 http://www.cnblogs.com/TomXu/archive/2012/02/14/2330137.html
+//开始 http://www.cnblogs.com/TomXu/archive/2012/02/22/2353341.html
 //设计模式 http://www.cnblogs.com/TomXu/archive/2012/02/20/2352817.html
 //JS基本测试
 (function()
@@ -128,9 +128,23 @@
     //    var a =30;
     //console.log(a);
 
-    var a = 1;
-    var b = function a(x){console.log(a);}
-    console.log(a);
+    //var a = 1;
+    //var b = function a(x){console.log(a);}
+    //console.log(a);
+
+    function Car(model,year,miles)
+    {
+        this.model = model,this.year=year,this.miles = miles;
+        this.output = function()
+        {
+            return this.model + "走了" + this.miles + "公里";
+        }
+    }
+
+    var tom = new Car("大叔",2009,20000);
+    var dudu = new Car("dudu",2010,10000);
+    console.log(tom.output());
+    console.log(dudu.output());
 
 
    
