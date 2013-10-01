@@ -33,16 +33,37 @@ namespace Web.Controllers
 
         public ActionResult Test()
         {
-            var a1= 3;
-            var b = new[] { 1,2,3};
-            int a = Web.Models.Test.Test1();
-            return Content(a.ToString());
+            List<int> list = new List<int>();
+            list.Add(1);
+            list.Add(10);
+            list.FindAll(delegate(int s) { return s>10; });
+            list.FindAll(pricate);
+            list.FindAll(s => { return s > 2; });
+            list.FindAll((int s) => { return s > 2; });
+            list.FindAll((int a) => { return true; });
+            return Content("");
+        }
+        public bool pricate(int s)
+        {
+            return true;
         }
         delegate double del();
 
         public double delT()
         {
             return 2;
+        }
+
+        public delegate int X1(int a,int b);
+
+        public void X2(X1 x1)
+        {
+
+        }
+
+        public void X2()
+        {
+            X2((x, y) => x * y);
         }
 
     }

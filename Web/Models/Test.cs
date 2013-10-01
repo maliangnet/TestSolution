@@ -106,13 +106,6 @@ namespace Web.Models
         public ClassInit(int a)
         {
 
-            List<int> list = new List<int>();
-            list.FindAll(delegate(int i) { return true; });
-            list.FindAll(s => s.ToString() == "abc");
-
-            int[] c = new int[] { 1,2,3,4};
-            int x = 3;
-            int c1 = x => x * 10;
         
         }
 
