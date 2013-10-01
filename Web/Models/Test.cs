@@ -100,13 +100,46 @@ namespace Web.Models
         }
     }
 
+    public class Clas1
+    {
+        public int Add(int a)
+        {
+            return a;
+        }
+    }
+
     public class ClassInit
     {
-        delegate int x(int i) ;
+        public delegate int D(int i) ;
         public ClassInit(int a)
         {
 
+<<<<<<< HEAD
         
+=======
+            List<int> list = new List<int>();
+            list.FindAll(delegate(int i) { return true; });
+            list.FindAll(s => s.ToString() == "abc");
+
+            int[] c = new int[] { 1,2,3,4};
+            int x = 3;
+            //int c1 = x => x * 10;
+
+            D d = new D(Add);
+            d(1);
+
+            D d1 = new D(new Clas1().Add);
+            d1(2);
+
+
+            Action dummyLambda = () =>{Console.WriteLine("Hello World from a Lambda expression!"); };
+            Func<int> dd = () => { return 1; };
+        }
+
+        public int Add(int a)
+        {
+            return a + 10;
+>>>>>>> 1277fb00069a2ef148a60ad9ab81ca79b8c67928
         }
 
         public string Name { set; get; }
